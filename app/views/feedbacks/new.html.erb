@@ -1,0 +1,10 @@
+<h2>Feedback</h2>
+
+<div>
+  <%= simple_form_for(feedback, url: feedback_path) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :message, as: :text %>
+    <%= f.button :submit, "Submit" %>
+  <% end %>
+</div>

@@ -29,6 +29,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "simple_form"
+gem "decent_exposure"
+gem "responders"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -42,6 +46,10 @@ group :development, :test do
   gem "rspec-rails", "~> 3.4"
   gem "jasmine", "> 2.0"
   gem 'listen', '~> 3.0.5'
+  gem "dotenv-rails"
+  gem "factory_girl_rails"
+  gem "letter_opener"
+  gem "faker"
 end
 
 group :development do
@@ -52,6 +60,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "foreman", require: false
   gem "spring-commands-rspec"
+end
+
+group :test do
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "email_spec"
+  gem "formulaic"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
