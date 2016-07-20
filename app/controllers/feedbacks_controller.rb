@@ -12,6 +12,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_attributes
-    params.fetch(:feedback, {}).permit(:email, :name, :message, :phone)
+    params.fetch(:feedback, {}).permit(:email, :name, :message)
   end
 end
